@@ -1,16 +1,14 @@
-﻿string[] array = new string[] { "test", "12", "0", "w" };
+﻿string[] array = new string[] { "test", "123", "0" };
 
 void PrintArray(string[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        
-            if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
-            else Console.Write($"{arr[i]}");
-        
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
 
 string[] CreateNewArray(string[] arr)
@@ -38,4 +36,6 @@ string[] CreateNewArray(string[] arr)
 }
 
 string[] newArray = CreateNewArray(array);
+PrintArray(array);
+Console.Write(" -> ");
 PrintArray(newArray);
